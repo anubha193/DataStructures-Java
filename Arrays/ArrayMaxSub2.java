@@ -27,7 +27,7 @@ public class ArrayMaxSub2 {
       }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        int arr[]= {-1,2};
+        int arr[]= {-1,18,13,18,-2,-16,7,-1,-213,11};
         System.out.println(sum(arr));
 	}
 

@@ -26,7 +26,7 @@ return max;
 }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	int arr[]= {-1, 2};
+	int arr[]= {-2,1,-3,4,-1,2,1,-5,4};
 //		Scanner sc=new Scanner(System.in);
 //		 System.out.println("enter the size of an array=");
 //	        int n=sc.nextInt();

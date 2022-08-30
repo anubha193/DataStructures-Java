@@ -8,12 +8,15 @@ public class Countdigit {
       Scanner sc=new Scanner(System.in);
       System.out.println("enter a number=");
       int n=sc.nextInt();
+      int a=0;
+      int sum=0;
      while(n!=0)
      {
-    	 count++;
+    	 a=n%10;
+    	  sum+=a;
     	 n=n/10; 
      }
-       System.out.println(count);
+       System.out.println(sum);
 	}
 
 }

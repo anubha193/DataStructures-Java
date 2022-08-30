@@ -9,9 +9,16 @@ public class SubArrayWithZeroSum {
     	  hm.put(-1, 0);
     	  int count=0;
     	  int max=0;
+    	
+    	  
     	  for(int i=0;i<arr.length;i++)
     	  {
     		  count=count+arr[i];
+    		  if (arr[i] == 0 && max == 0)
+                  max = 1;
+                if (count == 0)
+                  max = i + 1;
+//            
     		if(hm.containsKey(count)) 
     			max=Math.max(max, i-hm.get(count));
     		else
@@ -22,7 +29,7 @@ public class SubArrayWithZeroSum {
       
 	public static void main(String[] args) {
 	    
-		int arr[]= { 15,-2,2,-8,1,7,10,23};
+		int arr[]= {1 ,-1 ,2 ,-2,7,6,-6,-3,-4};
 		System.out.println(sub(arr));
 	}
      }
