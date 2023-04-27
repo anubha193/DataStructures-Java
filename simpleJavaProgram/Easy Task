@@ -1,0 +1,52 @@
+class Solution {
+    public static ArrayList<Character> easyTask(int n,String s,int q,query queries[])
+    { ArrayList<Character> al=new ArrayList<>();
+     char[] arr=s.toCharArray();
+     for(int i=0;i<q;i++)
+     {
+       if(queries[i].type.equals("1"))
+       {
+          arr[Integer.valueOf(queries[i].a)]=queries[i].b.charAt(0); 
+       }
+       else if(queries[i].type.equals("2"))
+       {
+           
+           int a=Integer.valueOf(queries[i].a);
+           int b=Integer.valueOf(queries[i].b);
+           int c=Integer.valueOf(queries[i].c);
+           int[] fre=new int[26];
+           for( int j=a;j<=b;j++)
+           {
+               fre[arr[j]-'a']++;
+           }
+           int count=0;
+           for(int j=25;j>=0;j--)
+           {
+               if(fre[j]!=0)
+               {
+                 count+=fre[j];
+                 if(count>=c){
+                 al.add((char)(j+97));
+                 break;
+                 }
+               }
+           }
+       }
+     }
+     return al;
+    }
+}
+class query
+{
+    String type;
+    String a;
+    String b;
+    String c;
+    public query(String type,String a,String b,String c)
+    {
+        this.type=type;
+        this.a=a;
+        this.b=b;
+        this.c=c;
+    }
+}
